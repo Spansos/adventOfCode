@@ -29,7 +29,8 @@ for i in movelines:
     moves.append((int(words[1]), int(words[3]), int(words[5])))
 
 for move in moves:
+    cargo[move[2]-1] += cargo[move[1]-1][-move[0]:]
     for i in range(move[0]):
-        cargo[move[2]-1].append(cargo[move[1]-1].pop())
+        cargo[move[1]-1].pop()
 
 print(''.join([i[-1] for i in cargo]))
