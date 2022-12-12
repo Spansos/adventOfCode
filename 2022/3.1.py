@@ -1,7 +1,8 @@
+import string
+
+
 with open("2022/3.1", "r") as file:
     lines = file.readlines()
-
-import string
 
 val_dicts = {v:(i+1) for i, v in enumerate(string.ascii_lowercase)}
 val_dicts |= {v:(i+27) for i, v in enumerate(string.ascii_uppercase)}
